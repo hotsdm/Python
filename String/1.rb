@@ -1,0 +1,7 @@
+﻿puts('Python과 Ruby공통 : ceil은 반올림,floor는 내림')
+puts("Python에서 복잡한 사칙연산을 할 때는 가장 위에 import math를 입력해야 함")
+puts("Python에서는 'math ceil(2.24)'와 같은 형식으로 입력해야 함")
+puts("Ruby에서는 'puts(2.24.floor())'와 같은 형식으로 입력해야 함")
+puts('hello '+'world')
+puts('ruby '*3)
+puts('hello' [0])

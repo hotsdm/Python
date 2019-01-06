@@ -1,0 +1,5 @@
+﻿print('python'.capitalize())
+print('python'.upper())
+print('python'.__len__())
+print(len('python'))
+print('python'.replace('hon', ' programming'))

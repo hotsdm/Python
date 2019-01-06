@@ -1,0 +1,5 @@
+﻿print("harmonia's \"programming\"")
+print('\\')
+print("harmonia's \nprogramming")
+print("harmonia's \t\tcom")
+print("\a")

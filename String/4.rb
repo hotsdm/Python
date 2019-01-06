@@ -1,0 +1,5 @@
+﻿puts("harmonia's \"programming\"")
+puts('\\')
+puts("harmonia's \nprogramming")
+puts("harmonia's \t\tcom")
+puts("\a")
