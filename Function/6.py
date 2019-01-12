@@ -1,12 +1,10 @@
-def margin(_mg):
-        return 1 - float(_mg)
-
-def price(_tp):
+def margin(_mg, _tp):
+        import math
         duty = 1.08
-        return int(_tp) * duty
+        cal_mg = 1 - float(_mg)
+        cal_tp = int(_tp) * duty
+        return math.ceil(cal_tp / cal_mg) 
 
-input_tp=input("TP를 입력해주세요. \n")
-input_margin=input("마진을 입력해주세요. \n (관세는 8% 고정. 마진 5%인 경우, 0.05 입력) \n")
-
-import math
-print(math.ceil(price(input_tp)/margin(input_margin)))
+input_tp = input("TP를 입력해주세요. \n")
+input_mg = input("마진을 입력해주세요. \n")
+print(margin(input_mg, input_tp))
