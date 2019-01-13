@@ -20,11 +20,11 @@ input_tp = input("TP를 입력해주세요. \n")
 input_mg = input("마진을 입력해주세요. \n")
 
 if input_cust == 'ksc':
-        ksc = Cal_margin(input_tp, input_mg)
-        print("계산된 경신의 SP는 " + str(ksc.ksc_m()) + "입니다.")
+        input_ksc = Cal_margin(input_tp, input_mg)
+        print("계산된 경신의 SP는 " + str(input_ksc.ksc_m()) + "입니다.")
 elif input_cust == 'ise':
-        ise = Cal_margin(input_tp, input_mg)
-        print(ise.ise_m())
+        input_ise = Cal_margin(input_tp, input_mg)
+        print(input_ise.ise_m())
 elif input_cust == 'yht':
         print("아직 설정되지 않았습니다.")
 elif input_cust == 'bs':
