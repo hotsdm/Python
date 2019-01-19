@@ -1,9 +1,8 @@
 class C(object):
     def __init__(self, v): #인스턴스 변수 설정하는 생성자! init
-        self.value = v #인스턴스 변수
+        self.value = v #self.value는 인스턴스 변수 / v 는 메소드 변수
     def show(self):
         print(self.value)
-
 
 c1 = C(10)
 print(c1.value)
