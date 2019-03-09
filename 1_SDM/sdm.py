@@ -15,40 +15,29 @@ class Cal_margin(object):
                 ise_tp = self.tp * self.duty_ise
                 return math.ceil(ise_tp / self.mg)
 
+
 input_cust = input("고객명을 입력해주세요. \n(경신=ksc, 영화=yht, ISE=ise, 브라이스톤=bs) \n")
-input_tp, input_mg = input("TP와 마진(5% = 0.05)을 입력해주세요. \n(단위는 생략하여 입력. 예시 -> 500 0.05) \n").split()
 
-if input_cust == 'ksc':
-        input_ksc = Cal_margin(input_tp, input_mg)
-        print("계산된 경신의 SP는 " + str(input_ksc.ksc_m()) + "입니다.")
-elif input_cust == 'ise':
-        input_ise = Cal_margin(input_tp, input_mg)
-        print("계산된 ISE의 SP는 " + str(input_ise.ise_m()) + "입니다.")
-elif input_cust == 'yht':
-        print("아직 설정되지 않았습니다.")
-elif input_cust == 'bs':
-        print("아직 설정되지 않았습니다.")
-else:
-        print("고객명 입력이 잘못 되었습니다.")
-
-# 아래는... 반복문을 통한 계산 방법 고민중...........
-# customers = ['ksc', 'yht', 'ise', 'bs']
-# for cust in customers:
-#         if cust == input_cust:
-#                 cust_Cal = Cal_margin(input_tp, input_mg)
-#                 print(cust_Cal.ksc_m())
-#                 import sys
-#                 sys.exit()
-#         elif cust == 'ise':
-#                 print('True_ise')
-#                 import sys
-#                 sys.exit()
-#         elif cust == 'yht':
-#                 print("아직 설정되지 않았습니다.")
-#                 import sys
-#                 sys.exit()
-#         elif cust == 'bs':
-#                 print("아직 설정되지 않았습니다.")
-#                 import sys
-#                 sys.exit()
-# print("고객명을 확인해주세요.")    
+customers = ['ksc','ise','yht','bs']
+for cust in customers:
+        if cust == input_cust:
+                input_tp, input_mg = input("TP와 마진(5% = 0.05)을 입력해주세요. \n(단위는 생략하여 입력. 예시 -> 500 0.05) \n").split()
+                if input_cust == 'ksc':
+                        input_ksc = Cal_margin(input_tp, input_mg)
+                        print("계산된 경신의 SP는 " + str(input_ksc.ksc_m()) + "입니다.")
+                        import sys
+                        sys.exit()
+                elif input_cust == 'ise':
+                        input_ise = Cal_margin(input_tp, input_mg)
+                        print("계산된 ISE의 SP는 " + str(input_ise.ise_m()) + "입니다.")
+                        import sys
+                        sys.exit()
+                elif input_cust == 'yht':
+                        print("아직 설정되지 않았습니다.")
+                        import sys
+                        sys.exit()
+                elif input_cust == 'bs':
+                        print("아직 설정되지 않았습니다.")
+                        import sys
+                        sys.exit()
+print("입력한 고객명을 확인해주세요.")
