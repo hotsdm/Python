@@ -15,7 +15,6 @@ class Cal_margin(object):
                 ise_tp = self.tp * self.duty_ise
                 return math.ceil(ise_tp / self.mg)
 
-
 input_cust = input("고객명을 입력해주세요. \n(경신=ksc, 영화=yht, ISE=ise, 브라이스톤=bs) \n")
 
 customers = ['ksc','ise','yht','bs']
